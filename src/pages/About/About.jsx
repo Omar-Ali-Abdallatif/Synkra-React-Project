@@ -4,7 +4,7 @@ import StatsSection from "./Stats/StatsSection";
 import styles from "./About.module.css";
 import PrinciplesSection from "./PrinciplesSection/PrinciplesSection";
 import TeamSection from "./TeamSection/TeamSection";
-import CtaSection from "./CtaSection/CtaSection";
+import CtaSection from "./CTASection/CtaSection";
 export default function About() {
   return (
     <main className={styles.aboutPage}>
