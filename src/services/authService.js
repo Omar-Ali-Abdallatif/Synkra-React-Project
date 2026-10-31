@@ -4,6 +4,41 @@ const ACCESS_TOKEN_KEY = 'accessToken';
 const REFRESH_TOKEN_KEY = 'refreshToken';
 let refreshPromise = null;
 
+const MOCK_CREDENTIALS = {
+  email: 'omar@dev.eg',
+  password: 'omar@dev7577',
+};
+
+const MOCK_SESSION_TOKEN = 'mock-omar-dev-access-token';
+const MOCK_SESSION_REFRESH = 'mock-omar-dev-refresh-token';
+
+function getMockUser() {
+  return {
+    id: 1,
+    email: MOCK_CREDENTIALS.email,
+    name: 'Omar Ali',
+    full_name: 'Omar Ali Abdallatif',
+    role: 'landlord',
+    profile_id: 1,
+    profile_data: {
+      role: 'landlord',
+      phone: '+20123456789',
+      project_name: 'Vitae',
+    },
+  };
+}
+
+function getMockProfile(profileId = 1) {
+  return {
+    id: profileId,
+    name: 'Omar Ali',
+    full_name: 'Omar Ali Abdallatif',
+    email: MOCK_CREDENTIALS.email,
+    role: 'landlord',
+    phone: '+20123456789',
+  };
+}
+
 function getMessage(payload, fallback) {
   if (typeof payload === 'string') return payload;
   if (payload?.detail) return payload.detail;
@@ -71,6 +106,7 @@ export function isAuthenticated() {
 export function clearSession() {
   sessionStorage.removeItem(ACCESS_TOKEN_KEY);
   sessionStorage.removeItem(REFRESH_TOKEN_KEY);
+  sessionStorage.removeItem('mockSubscription');
 }
 
 export function logout() {
@@ -96,6 +132,22 @@ export async function register({ email, password, phone, role }) {
 }
 
 export async function login({ email, password }) {
+  const normalizedEmail = email ? email.trim().toLowerCase() : '';
+  if (
+    normalizedEmail === MOCK_CREDENTIALS.email &&
+    password === MOCK_CREDENTIALS.password
+  ) {
+    const user = getMockUser();
+    const payload = {
+      access: MOCK_SESSION_TOKEN,
+      refresh: MOCK_SESSION_REFRESH,
+      user,
+    };
+    sessionStorage.setItem(ACCESS_TOKEN_KEY, MOCK_SESSION_TOKEN);
+    sessionStorage.setItem(REFRESH_TOKEN_KEY, MOCK_SESSION_REFRESH);
+    return { token: MOCK_SESSION_TOKEN, payload };
+  }
+
   const payload = await request('/login/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -117,6 +169,10 @@ function notifyExpiredSession() {
 export async function refreshAccessToken(
   refreshToken = getStoredRefreshToken(),
 ) {
+  if (refreshToken === MOCK_SESSION_REFRESH) {
+    return MOCK_SESSION_TOKEN;
+  }
+
   if (!refreshToken) {
     throw new Error('Your session has ended. Please sign in again.');
   }
@@ -182,10 +238,16 @@ export async function authenticatedRequest(
 }
 
 export function getCurrentUser() {
+  if (getStoredToken() === MOCK_SESSION_TOKEN) {
+    return Promise.resolve(getMockUser());
+  }
   return authenticatedRequest('/api/me/');
 }
 
 export function getProfile(profileId) {
+  if (getStoredToken() === MOCK_SESSION_TOKEN) {
+    return Promise.resolve(getMockProfile(profileId));
+  }
   return authenticatedRequest(`/profiles/${profileId}/`);
 }
 
@@ -204,14 +266,49 @@ export function approveStaff(userId) {
 }
 
 export function getSubscriptions() {
+  if (getStoredToken() === MOCK_SESSION_TOKEN) {
+    const stored = sessionStorage.getItem('mockSubscription');
+    return Promise.resolve(
+      stored
+        ? JSON.parse(stored)
+        : [
+            {
+              id: 1,
+              user: MOCK_CREDENTIALS.email,
+              plan_name: 'pro',
+              status: 'active',
+            },
+          ],
+    );
+  }
   return authenticatedRequest('/subscriptions/');
 }
 
 export function getSubscriptionById(subscriptionId) {
+  if (getStoredToken() === MOCK_SESSION_TOKEN) {
+    return Promise.resolve({
+      id: subscriptionId,
+      user: MOCK_CREDENTIALS.email,
+      plan_name: 'pro',
+      status: 'active',
+    });
+  }
   return authenticatedRequest(`/subscriptions/${subscriptionId}/`);
 }
 
 export function createSubscription(planName) {
+  if (getStoredToken() === MOCK_SESSION_TOKEN) {
+    const newSubscription = [
+      {
+        id: Date.now(),
+        user: MOCK_CREDENTIALS.email,
+        plan_name: planName,
+        status: 'active',
+      },
+    ];
+    sessionStorage.setItem('mockSubscription', JSON.stringify(newSubscription));
+    return Promise.resolve(newSubscription[0]);
+  }
   return authenticatedRequest('/subscriptions/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
