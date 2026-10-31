@@ -4,7 +4,7 @@ import Check from '../../assets/challenging/Check.svg';
 import Bug from '../../assets/challenging/Bug.svg';
 import Rocket from '../../assets/challenging/Rocket.svg';
 import Lightning from '../../assets/challenging/Lightning.svg';
-import Improv from '../../assets/challenging/improv.svg';
+import Improv from '../../assets/challenging/Improv.svg';
 import IconDesign from '../../assets/challenging/IconDesign.svg';   
 import IconDolars from '../../assets/challenging/IconDolars.svg';   
 import IconKey from '../../assets/challenging/IconKey.svg';   
