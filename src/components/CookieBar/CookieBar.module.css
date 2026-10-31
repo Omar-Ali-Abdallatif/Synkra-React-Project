@@ -1,0 +1,113 @@
+/* CookieBar.module.css */
+
+.cookieBar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 24px;
+  background-color: #000000; 
+  color: var(--cookie-text-color, #FCFCFD);
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 13px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cookieText {
+  margin: 0;
+  color: var(--cookie-text-color, #FCFCFD);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.cookieLink {
+  color: var(--cookie-text-color, #FCFCFD);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.cookieLink:hover {
+  opacity: 0.8;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.manageButton,
+.acceptButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.manageButton {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: transparent;
+  color: #FCFCFD;
+}
+
+.manageButton:hover {
+  border-color: #FCFCFD;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.acceptButton {
+  border: none;
+  background-color: var(--color-primary, #1A56DB);
+  color: #FCFCFD;
+}
+
+.acceptButton:hover {
+  background-color: #1546B8;
+}
+
+/* ===== Responsive Mobile Viewport ===== */
+@media (max-width: 760px) {
+  .cookieBar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .cookieText {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .actionGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .manageButton,
+  .acceptButton {
+    width: 100%;
+    height: 36px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}

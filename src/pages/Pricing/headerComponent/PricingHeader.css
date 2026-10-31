@@ -1,0 +1,27 @@
+header {
+    font-family: "Newsreader", serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    width: 50%;
+    line-height: 1.1;
+    margin-bottom: 70px;
+}
+
+.header-span {
+    color: #1A56DB;
+    font-style: italic;
+}
+
+header p {
+    font-weight: 500;
+    color: #514F4A;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+header p span {
+    font-style: italic;
+    color: #514F4A;
+    font-weight: 900;
+}

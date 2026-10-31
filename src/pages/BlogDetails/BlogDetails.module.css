@@ -1,0 +1,36 @@
+.blogContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px ;
+  
+  
+}
+
+.articleLayout {
+    display: grid;
+    grid-template-columns: minmax(0,1fr)320px;
+    gap: 80px;
+    align-items: start;
+}
+
+.articleContent {
+    min-width: 0;
+    
+}
+
+.moreSynkra {
+ margin-top: 80px;
+}
+.mobileNewsletterWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .articleLayout {
+        grid-template-columns: 1fr;
+        gap: 5px ;
+    }
+    .mobileNewsletterWrapper {
+        display: block;
+    }
+}

@@ -1,0 +1,141 @@
+.page {
+  align-items: center;
+  background: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  padding: 72px 24px 100px;
+}
+
+.card {
+  background: var(--gradient-features-card);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+  max-width: 460px;
+  padding: 42px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  font: 400 clamp(38px, 5vw, 48px)/1.05 var(--font-heading);
+  letter-spacing: -0.04em;
+  margin: 12px 0;
+}
+
+.intro,
+.switchText {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.label {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input,
+.select {
+  background: var(--color-bg);
+  border: 1px solid var(--border-card);
+  border-radius: 6px;
+  color: var(--color-text);
+  font: 400 15px/1.3 var(--font-body);
+  min-height: 47px;
+  outline: none;
+  padding: 12px 13px;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary) 16%, transparent);
+}
+
+.inputInvalid {
+  border-color: #c2413b;
+}
+
+.error {
+  color: #c2413b;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.notice {
+  background: var(--bg-icon-success-secondary);
+  border: 1px solid var(--color-success);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 11px 12px;
+}
+
+.submit {
+  background: var(--color-button-bg);
+  border: 1px solid var(--color-button-bg);
+  border-radius: 6px;
+  color: var(--color-button);
+  cursor: pointer;
+  font: 500 15px/1 var(--font-body);
+  min-height: 47px;
+  transition: background 180ms ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: #1649bb;
+}
+
+.submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.switchText {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.link {
+  color: var(--color-text-link);
+  font-weight: 500;
+}
+
+@media (max-width: 620px) {
+  .page {
+    align-items: flex-start;
+    min-height: calc(100vh - 64px);
+    padding: 42px 16px 96px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+}

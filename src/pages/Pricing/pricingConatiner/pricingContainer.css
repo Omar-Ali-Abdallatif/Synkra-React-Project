@@ -1,0 +1,54 @@
+.price-select {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.btn-container {
+    border: 2px solid #10399B;
+    border-radius: 20px;
+    padding-top: 3px;
+    padding-left: 8px;
+    background-color: #EBF2FD;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 10px;
+
+
+}
+
+.btn-container:hover {
+    scale: 1.1;
+}
+
+.btn-circle {
+    width: 25px;
+    height: 25px;
+    background-color: #10399B;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.btn-circle.yearly {
+    transform: translateX(55px);
+}
+
+
+
+.active-text {
+    font-weight: bold;
+    color: #10399B;
+    display: block;
+    font-size: 22px;
+}
+
+.save {
+    margin-left: 30px;
+    color: #1B6F4A;
+    font-weight: 400;
+}

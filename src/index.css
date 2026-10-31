@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  /* ===== Fonts ===== */
+  --font-heading: 'Newsreader', serif;
+  --font-body: 'DM Sans', sans-serif;    
+
+  /* ===== Brand Colors ===== */    
+  --color-primary: #1A56DB;
+  --color-accent: #F4A016;        
+  --color-success: #0D9488;                 
+
+  /* ===== Backgrounds ===== */     
+  --color-bg: #F5F7F9;                           
+  --color-bg-secondary: #F2F1EF;      
+  --color-bg-accent: #EBF2FD;  
+  --color-bg-gradient: none; 
+
+  /* ===== Text ===== */   
+  --color-text: #131210;
+  --color-text-cta: #FCFCFD;                            
+  --color-text-secondary: #514F4A; 
+  --third-color-text:#CCFBF1;  
+  --color-text-muted: #78766F;
+  --color-text-placeholder: #A09E97;            
+  --color-text-link: #1A56DB;   
+
+  /* ===== Card / Section Gradients ===== */
+  --gradient-cta:
+    radial-gradient(circle 368px at 88% 15%, rgba(26, 86, 219, 0.2) 0%, transparent 70%),
+    radial-gradient(circle 368px at 8% 90%, rgba(13, 148, 136, 0.2) 0%, transparent 70%),
+    linear-gradient(135deg, #0E0F11 0%, #23252A 100%);
+  --gradient-cta-blog:
+    radial-gradient(ellipse 35% 55% at 85% 20%, rgba(244, 160, 22, 0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 55% at 15% 85%, rgba(26, 86, 219, 0.12) 0%, transparent 70%),
+    linear-gradient(135deg, #0E0F11 0%, #23252A 100%);
+  --gradient-card: radial-gradient(circle at 55% 100%, #FDF0DC 0%, #FFFFFF 50%);
+  --gradient-features-card: linear-gradient(135deg, #FAFAFB 0%, #FFFFFF 100%);
+  --gradient-card-secondary:linear-gradient(135deg, #FFFFFF 0%, #FEF6E7 100%);
+  --gradient-newsletter: linear-gradient(135deg, #003FB1 0%, #1A56DB 100%);
+
+  /* ===== Tag/Badge Backgrounds ===== */
+  --tag-bg-1: #FEF6E7;
+  --tag-bg-2: #EDFAF3;           
+  --tag-bg-3: #FEF0F0;    
+  --tag-bg-4:  #0F766E;
+  --color-num:#1B6F4A;
+  --color-arrow:#A09E97;
+
+   /* //avatar colores bg and text   */
+  --avatar-blue-bg: #EBF2FD;
+  --avatar-blue-text: #1A56DB;
+
+  --avatar-gray-bg: #E4E3DF;
+  --avatar-gray-text: #131210;
+
+  --avatar-teal-bg: #0F766E;
+  --avatar-teal-text: #CCFBF1;
+ 
+  /* ===== Icons ===== */                                                    
+  --bg-social-icon: #E4E3DF;    
+  --bg-icon-accent: #EBF2FD;
+  --color-icon: #0F766E;
+  --bg-icon-success: #BCC7DE;
+  --bg-icon-success-secondary: #D1E1DA; 
+  --color-toc-active: #1A56DB ;                        
+ 
+  /* ===== Borders ===== */      
+  --border-card: #E4E3DF;    
+
+  /* ===== Buttons ===== */                      
+  --color-button-bg: #1A56DB;
+  --color-button : #FCFCFD ;    
+  /* ===== Fixed / theme-invariant ===== */
+  --cookie-text-color: #FCFCFD;
+}
+
+[data-theme="dark"] {
+  /* ===== Brand Colors ===== */
+  --color-primary: #1A56DB;      
+  --color-accent: #F4A016;
+  --color-success: #2DD4BF;
+
+  /* ===== Backgrounds ===== */        
+  --color-bg: #131210;
+  --color-bg-secondary: #1F1E1C;      
+  --color-bg-gradient:
+    radial-gradient(circle at 85% 20%, var(--glow-primary) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, var(--glow-tertiary) 0%, transparent 50%);   
+
+  /* ===== Text ===== */
+  --color-text: #FCFCFD;
+  --color-text-secondary: #CBC9C2;
+  --third-color-text:#5EEAD4; 
+  --color-text-muted: #A09E97;          
+  --color-text-placeholder: #78766F;
+  --color-text-link: #75A2F0;
+  --color-text-cta: none;  
+
+  /* ===== Card / Section Gradients ===== */
+   --gradient-cta:
+    radial-gradient(ellipse 35% 55% at 85% 20%, rgba(26, 86, 219, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 55% at 15% 85%, rgba(13, 148, 136, 0.16) 0%, transparent 70%),
+    linear-gradient(135deg, #1B1D20 0%, #000000 100%);
+   --gradient-cta-blog:
+    radial-gradient(ellipse 45% 45% at 82% 32%, rgba(244, 160, 22, 0.2) 0%, transparent 78%),
+    radial-gradient(ellipse 45% 60% at 10% 95%, rgba(26, 86, 219, 0.12) 0%, transparent 75%),
+    linear-gradient(135deg, #1B1D20 0%, #000000 100%);
+  --gradient-card:
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(13, 148, 136, 0.2) 0%, transparent 75%),
+    linear-gradient(135deg, #000000 0%, #091328 100%);
+  --gradient-features-card: linear-gradient(135deg, #000000 0%, #091328 100%);
+  --gradient-card-secondary: linear-gradient(135deg, #000000 0%, #221602 100%);
+  --gradient-newsletter: linear-gradient(135deg, #003FB1 0%, #1A56DB 100%);
+
+
+  /* ===== Tag/Badge Backgrounds ===== */
+  --tag-bg-1: #4D3308;
+  --tag-bg-2: #052E1F;
+  --tag-bg-3: #4D1212;
+  --tag-bg-4:  #134E4A;
+  --color-num:#EDFAF3;
+  --color-arrow:#A09E97;    
+
+  /* //avatar colores bg and text   */
+  --avatar-blue-bg: #081D5B;
+  --avatar-blue-text: #75A2F0;
+
+  --avatar-gray-bg: #333230;
+  --avatar-gray-text: #FCFCFD;
+
+  --avatar-teal-bg: #134E4A;
+  --avatar-teal-text: #5EEAD4;
+
+
+  /* ===== Icons ===== */
+  --bg-social-icon: #333230;
+  --bg-icon-accent: #082046;
+  --color-icon: #2DD4BF; 
+  --bg-icon-success: #303846;
+  --bg-icon-success-secondary: #1B3A2E; 
+  --color-toc-active: #F4A016 ; 
+
+  /* ===== Borders ===== */             
+  --border-card: #333230;
+  
+  /* ===== Buttons ===== */
+  --color-button-bg: #0C2B7B;
+  --color-button : #FCFCFD ;
+
+  /* ===== Fixed / theme-invariant ===== */
+  --cookie-text-color: #FCFCFD;     
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4, h5, h6 {       
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+

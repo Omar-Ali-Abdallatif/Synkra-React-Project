@@ -1,0 +1,122 @@
+.price-card {
+    margin-top: 30px;
+    border: solid #E4E3DF 1px;
+    box-shadow: 0 2px 10px 1px #0206171A;
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%;
+    height: max-content;
+}
+
+
+.plan-label {
+    color: #78766F;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.plan-price {
+    margin: 15px 0;
+}
+
+.card-price {
+    color: #131210;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.price-suffix {
+    color: #78766F;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.plan-description {
+    color: #514F4A;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.plan-feature {
+    list-style: none;
+    text-align: left;
+
+}
+
+.plan-feature {
+    list-style: none;
+    text-align: left;
+}
+
+.plan-feature li {
+    display: flex;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: #e0dfdb 1px solid;
+
+}
+
+.plan-feature img {
+    margin-right: 20px;
+}
+
+.plan-cta {
+
+    border: solid #E4E3DF 1px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.plan-cta:hover {
+    scale: 1.08;
+}
+
+.plan-cta img {
+    width: 25px;
+    margin-left: 20px;
+}
+
+.price-active {
+    border: solid #1A56DB 3px;
+    box-shadow: 0 2px 10px 1px #0206171A;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 0;
+    margin: 20px;
+    height: max-content;
+    width: 30%;
+    position: relative;
+}
+
+.price-active .plan-label {
+    color: #1A56DB;
+}
+
+.price-active .plan-cta {
+
+    background-color: #1A56DB;
+    color: white;
+}
+
+.price-card .plan-cta {
+
+    margin: 20px 0;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    font-size: 20px;
+    transform: translateX(-50%);
+    background-color: #F4A016;
+    border-radius: 9999px;
+    padding: 10px 20px;
+}

@@ -1,0 +1,351 @@
+.outer {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 64px;
+  margin: 0 auto;
+}
+
+.topTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.topLeft {
+  width: 49%;
+}
+.mobileBreak {
+  display: block;
+}
+.topLeft h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--color-text);
+}
+.topRight {
+  width: 51%;
+}
+.topBadge {
+  background: var(--color-bg-accent);
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  color: var(--color-text-link);
+  margin-bottom: 12px;
+}
+.topText {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/*       g     */
+
+.firstGroup {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.feature1 {
+  background-color: var(--color-text-cta);
+  padding: 32px;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  /* width: 757.33px; */
+}
+.f1Badge {
+  font-family: var(--font-body);
+  background: var(--color-bg-accent);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  color: var(--color-text-link);
+  margin-bottom: 16px;
+}
+.feature1 h3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.feature1 p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+.f1Img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.feature2 {
+  background-color: var(--color-button-bg);
+  padding: 32px;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 362.67px;
+}
+.f2Badge {
+  font-family: var(--font-body);
+  background: var(--tag-bg-2);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  color: var(--color-num);
+  margin-bottom: 24px;
+}
+.feature2 h3 {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-text-cta);
+  margin-bottom: 8px;
+}
+.feature2 p {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  color: var(--color-text-cta);
+  position: relative;
+}
+.state {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: 96px;
+  font-weight: 700;
+  color: #a3c1f5;
+  top: 20px;
+  left: 50px;
+}
+
+.secondGroup {
+  background-color: var(--color-text-cta);
+  padding: 20px 32px 20px 24px;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.feature3 {
+  margin: 20px 24px 20px 8px;
+}
+.f3Badge {
+  font-family: var(--font-body);
+  background: var(--tag-bg-4);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  color: var(--third-color-text);
+  margin-bottom: 16px;
+}
+.feature3 h3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.feature3 p {
+  font-family: var(--font-body);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+.f3Svg span {
+  font-family: var(--font-body);
+  display: inline-flex;
+  gap: 5px;
+}
+.f3s {
+  padding-right: 16px;
+}
+
+.thirdGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.cards {
+  background-color: var(--color-text-cta);
+  padding: 32px;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+}
+.feature4 {
+  background-color: var(--color-accent);
+}
+.f4Badge {
+  font-family: var(--font-body);
+  background: var(--tag-bg-1);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  color: #92510a;
+  margin-bottom: 16px;
+}
+.featH3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.featP {
+  font-family: var(--font-body);
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.f5Badge {
+  font-family: var(--font-body);
+  background: var(--tag-bg-2);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  color: var(--color-num);
+  margin-bottom: 16px;
+}
+.f6Badge {
+  font-family: var(--font-body);
+  background: var(--tag-bg-3);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  color: #be1c1c;
+  margin-bottom: 16px;
+}
+.feature6 p {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .firstGroup {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature1 {
+    width: 75%;
+  }
+  .feature2 {
+    width: 90%;
+    max-width: 75%;
+  }
+  .f1Img {
+    width: 100%;
+  }
+  .secondGroup {
+    flex-direction: column;
+  }
+  .thirdGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .topTitle {
+    flex-direction: column;
+  }
+  .topLeft {
+    width: 100%;
+  }
+  .mobileBreak {
+    display: none;
+  }
+  .topLeft h2 {
+    font-size: 24px;
+  }
+  .topRight {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .feature1 {
+    width: 100%;
+  }
+  .feature1 h3 {
+    font-size: 20px;
+  }
+  .feature1 p {
+    font-size: 14px;
+  }
+  .f1Badge {
+    font-size: 12px;
+  }
+  .feature2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .feature2 h3 {
+    font-size: 24px;
+  }
+  .feature2 p {
+    font-size: 14px;
+  }
+  .f2Badge {
+    font-size: 12px;
+  }
+
+  .secondGroup {
+    flex-direction: column-reverse;
+    margin-bottom: 16px;
+  }
+  .feature3 h3 {
+    font-size: 20px;
+  }
+  .feature3 p {
+    font-size: 14px;
+  }
+  .f3Svg span {
+    font-size: 12px;
+  }
+  .f3Img img {
+    width: 100%;
+  }
+
+  .thirdGroup {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .f6Badge,
+  .f5Badge,
+  .f4Badge {
+    font-size: 12px;
+  }
+  .featH3 {
+    font-size: 20px;
+  }
+  .featP {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,142 @@
+.page {
+  background: var(--color-bg);
+  min-height: calc(100vh - 70px);
+  padding: 78px 24px 120px;
+}
+
+.card {
+  align-items: center;
+  background: var(--gradient-features-card);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 34px;
+}
+
+.avatar {
+  align-items: center;
+  background: var(--avatar-blue-bg);
+  border-radius: 50%;
+  color: var(--avatar-blue-text);
+  display: flex;
+  flex: 0 0 70px;
+  font-size: 28px;
+  font-weight: 600;
+  height: 70px;
+  justify-content: center;
+  overflow: hidden;
+  width: 70px;
+}
+
+.avatar img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  font: 400 38px/1.1 var(--font-heading);
+  margin: 6px 0;
+}
+
+.card p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.logout {
+  background: transparent;
+  border: 1px solid var(--border-card);
+  border-radius: 6px;
+  color: var(--color-text);
+  cursor: pointer;
+  font: 500 14px var(--font-body);
+  margin-left: auto;
+  padding: 11px 14px;
+}
+
+.logout:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.subscriptionSection,
+.adminSection {
+  background: var(--gradient-features-card);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  margin: 20px auto 0;
+  max-width: 760px;
+  padding: 30px 34px;
+}
+
+.subscriptionSection h2,
+.adminSection h2 {
+  font: 400 30px/1.1 var(--font-heading);
+  margin: 7px 0 14px;
+}
+
+.subscriptionSection p,
+.adminSection p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.subscriptionDetails {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.subscriptionDetails strong,
+.subscriptionDetails span {
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 7px 10px;
+  text-transform: capitalize;
+}
+
+.subscriptionDetails strong {
+  background: var(--avatar-blue-bg);
+  color: var(--avatar-blue-text);
+}
+
+.subscriptionDetails span {
+  background: var(--bg-icon-success-secondary);
+  color: var(--color-success);
+}
+
+.subscriptionSection .statusError {
+  color: #c2413b;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 42px 16px 96px;
+  }
+  .card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+  .logout {
+    margin-left: 0;
+    width: 100%;
+  }
+  .subscriptionSection,
+  .adminSection {
+    padding: 24px;
+  }
+}
